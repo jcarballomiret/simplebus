@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <connectionStrings>
   <add name="TransportDB" connectionString="Data Source=localhost;Initial Catalog=messages;User Id=sa;Password=sasa;" providerName="System.Data.SqlClient" />
-  <!--<add name="TransportDB" connectionString="Server=tcp:loz071tsof.database.windows.net,1433;Database=pokedb;User ID=poke@loz071tsof;Password=W3lcome1;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" providerName="System.Data.SqlClient" />-->
 </connectionStrings>
