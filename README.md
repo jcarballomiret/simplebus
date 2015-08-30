@@ -65,3 +65,4 @@ static void Main(string[] args)
 
 ## Tech
 * SQL Server
+* CastleWindsor
