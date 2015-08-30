@@ -61,12 +61,6 @@ namespace ConsoleApplication2
 
             worker.Start();
 
-            //var handlerType = worker.GetHandlerForMessageType((new MyMessage().GetType()));
-
-            //var myMessageHandler = bus.Container.Resolve<MyMessagesHandler>();
-
-            //myMessageHandler.Handle(new MyMessage());
-
             Console.ReadLine();
         }
     }
@@ -75,7 +69,6 @@ namespace ConsoleApplication2
     {
         public string Message { get; set; }
     }
-    public class MyMessageToSend { }
 
     public class MyMessagesHandler : MessageHandler<MyMessage>
     {
