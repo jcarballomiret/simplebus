@@ -27,6 +27,13 @@ public class MyMessagesHandler : MessageHandler<MyMessage>
     }
 }
 ```
+Now in a ConsoleApplication let's send and receive some messages to demostrate how to configure de Bus. For that we need to:
+
+1. Define the **EndpointName**, this is the name of the queue where we are going to be sending and reading from the messages.
+
+2. Set and configure the **Transport** we are going to use, we will use SQL in this case but it can be any class that implements the interface **IMessageQueueSystem**.
+
+3. Configure the **Routings**, here we define the destination queue for each type of message.
 
 ```c#
 static void Main(string[] args)
@@ -50,10 +57,9 @@ static void Main(string[] args)
     for (int i = 0; i < 10000; i++)
         bus.SendMessage(new MyMessage() { Message = i.ToString() });
 
-    // Starting the worker, this will continue monitor the "Test_MyMessageQueue" queue.
+    // Starting the worker, this will continue monitoring the "Test_MyMessageQueue" queue.
     worker.Start();
 
-    Console.ReadLine();
 }
 ```
 
