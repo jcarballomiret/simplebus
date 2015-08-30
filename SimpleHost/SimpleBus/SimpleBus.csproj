@@ -52,8 +52,6 @@
     <Compile Include="Bus.cs" />
     <Compile Include="Exceptions\HandlerNotFoundForMessage.cs" />
     <Compile Include="Exceptions\SimpleBusException.cs" />
-    <Compile Include="Helpers\MessageHandlingHelper.cs" />
-    <Compile Include="Helpers\PerformanceManager.cs" />
     <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="Helpers\WhileHelper.cs" />
     <Compile Include="MessageHandler.cs" />

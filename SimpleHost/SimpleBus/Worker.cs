@@ -19,8 +19,6 @@ namespace SimpleBus
             Configure(bus);
         }
 
-
-
         private void Configure(Bus bus)
         {
             // Injecting the Bus into all MessageHandler descendants
