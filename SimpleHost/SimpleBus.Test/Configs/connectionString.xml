@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connectionStrings>
+  <add name="TestDatabase" connectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\TestDatabase.mdf;Integrated Security=True;User Instance=True" providerName="System.Data.SqlClient"/>
+</connectionStrings>

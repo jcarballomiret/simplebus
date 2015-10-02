@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 using Newtonsoft.Json;
 using SimpleBus.Helpers;
 
@@ -15,7 +16,7 @@ namespace SimpleBus.SqlTransport
             using (var connection = new SqlConnection(TransportConnectionString))
             {
                 connection.Open();
-                using (var command = new SqlCommand("delete top (1) Test_MyMessageQueue output deleted.* ", connection))
+                using (var command = new SqlCommand($"delete top (1) {queueName} output deleted.* ", connection))
                 {
                     var reader = command.ExecuteReader();
                     while (reader.Read())
@@ -29,7 +30,7 @@ namespace SimpleBus.SqlTransport
                             Body = JsonConvert.DeserializeObject(reader["body"].ToString(), TypeHelper.GetType(reader["type"].ToString()))
                         };
 
-                        return transportMessage;                                              
+                        return transportMessage;
                     }
                 }
             }
@@ -43,11 +44,7 @@ namespace SimpleBus.SqlTransport
 
         private void InsertMessage(QueueMessage message, string queueName, int tryNumber)
         {
-            if (tryNumber > 5)
-            {
-                // TODO: log
-                return;
-            }
+            
             using (
                 var mycon = new SqlConnection())
             {
@@ -57,16 +54,18 @@ namespace SimpleBus.SqlTransport
                 {
                     CommandType = CommandType.Text,
                     Connection = mycon,
-                    CommandText = string.Format(@"
-                                        INSERT INTO [dbo].[{0}]
+                    CommandText =
+                        $@"
+                                        INSERT INTO [dbo].[{queueName}]
                                                ([id]
                                                ,[sent_on]
                                                ,[type]
                                                ,[header]
                                                ,[body])
                                          VALUES
-                                               ('{1}', '{2}', '{3}', '{4}', '{5}')",
-                        queueName, message.Id, message.SentDateTime.ToString("yyyy-MM-dd hh:mm:ss.mmm"), message.Type, message.Headers, message.Body)
+                                               ('{
+                            message.Id}', '{message.SentDateTime.ToString("yyyy-MM-dd hh:mm:ss.mmm")}', '{message.Type
+                            }', '{message.Headers}', '{message.Body}')"
                 };
 
                 try
@@ -75,9 +74,13 @@ namespace SimpleBus.SqlTransport
 
                     mycomm.ExecuteNonQuery();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    //TODO: log exception
+                    if (tryNumber > 5)
+                    {
+                        // TODO: log
+                        throw;
+                    }
                     InsertMessage(message, queueName, tryNumber + 1);
                 }
             }
@@ -113,15 +116,10 @@ namespace SimpleBus.SqlTransport
                                         );", queueName)
                 };
 
-                try
-                {
-                    mycon.Open();
+                mycon.Open();
 
-                    mycomm.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                }
+                mycomm.ExecuteNonQuery();
+
             }
         }
     }
