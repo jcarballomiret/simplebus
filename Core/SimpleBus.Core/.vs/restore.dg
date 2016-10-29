@@ -1,0 +1,9 @@
+#:D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core\SimpleBus.Core.xproj
+#:D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.ConsoleTest\SimpleBus.ConsoleTest.xproj
+D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.ConsoleTest\SimpleBus.ConsoleTest.xproj|D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core\SimpleBus.Core.xproj
+D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.ConsoleTest\SimpleBus.ConsoleTest.xproj|D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.SqlMessageQueueSystem\SimpleBus.Core.SqlMessageQueueSystem.xproj
+D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.SqlMessageQueueSystem\SimpleBus.Core.SqlMessageQueueSystem.xproj|D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core\SimpleBus.Core.xproj
+#:D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.SqlMessageQueueSystem\SimpleBus.Core.SqlMessageQueueSystem.xproj
+D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.SqlMessageQueueSystem\SimpleBus.Core.SqlMessageQueueSystem.xproj|D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core\SimpleBus.Core.xproj
+#:D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.Test\SimpleBus.Core.Test.xproj
+D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core.Test\SimpleBus.Core.Test.xproj|D:\Jose\github\simplebus\Core\SimpleBus.Core\src\SimpleBus.Core\SimpleBus.Core.xproj

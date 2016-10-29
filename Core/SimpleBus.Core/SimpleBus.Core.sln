@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B563BD9-2FBD-4D28-8318-40B4B5EE1418}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C3D9BF1-3862-4290-9678-DB23A2F6B038}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleBus.Core", "src\SimpleBus.Core\SimpleBus.Core.xproj", "{28CD134A-F108-48DB-918E-2AD041D13849}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleBus.ConsoleTest", "src\SimpleBus.ConsoleTest\SimpleBus.ConsoleTest.xproj", "{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleBus.Core.SqlMessageQueueSystem", "src\SimpleBus.Core.SqlMessageQueueSystem\SimpleBus.Core.SqlMessageQueueSystem.xproj", "{4DA79661-660B-444B-BECC-FC1C84804EC4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleBus.Core.Test", "src\SimpleBus.Core.Test\SimpleBus.Core.Test.xproj", "{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28CD134A-F108-48DB-918E-2AD041D13849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CD134A-F108-48DB-918E-2AD041D13849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CD134A-F108-48DB-918E-2AD041D13849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CD134A-F108-48DB-918E-2AD041D13849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA79661-660B-444B-BECC-FC1C84804EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA79661-660B-444B-BECC-FC1C84804EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA79661-660B-444B-BECC-FC1C84804EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA79661-660B-444B-BECC-FC1C84804EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28CD134A-F108-48DB-918E-2AD041D13849} = {6B563BD9-2FBD-4D28-8318-40B4B5EE1418}
+		{3ECBA223-4FA8-4E60-88BE-D05DBE6108EA} = {6B563BD9-2FBD-4D28-8318-40B4B5EE1418}
+		{4DA79661-660B-444B-BECC-FC1C84804EC4} = {6B563BD9-2FBD-4D28-8318-40B4B5EE1418}
+		{D9FB3589-D41F-4B98-89BC-00C5DF8FB7AD} = {6B563BD9-2FBD-4D28-8318-40B4B5EE1418}
+	EndGlobalSection
+EndGlobal
